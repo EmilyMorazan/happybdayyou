@@ -105,12 +105,12 @@ export default function App() {
   };
 
   const [celebrating, setCelebrating] = useState(false);
-  const [showMatthew, setShowMatthew] = useState(false);
-  let matthewSrc = null;
+  const [showJohnny, setShowJohnny] = useState(false);
+  let johnnySrc = null;
   try {
-    matthewSrc = require("./assets/matthew.jpg");
+    johnnySrc = require("./assets/meandyou (1).JPG");
   } catch (e) {
-    matthewSrc = null;
+    johnnySrc = null;
   }
   useEffect(() => {
     if (staticFrame === cake20) {
@@ -188,30 +188,30 @@ export default function App() {
       {celebrating && (
         <Confetti
           pieces={48}
-          duration={8000}
+          duration={100}
           onDone={() => {
             setCelebrating(false);
-            setTimeout(() => setShowMatthew(true), 250);
+            setTimeout(() => setShowJohnny(true), 250);
           }}
         />
       )}
 
-      {showMatthew && (
+      {showJohnny && (
         <div
-          className="matthew-overlay"
-          onClick={() => setShowMatthew(false)}
+          className="johnny-overlay"
+          onClick={() => setShowJohnny(false)}
           onKeyDown={(e) => {
-            if (e.key === "Escape") setShowMatthew(false);
+            if (e.key === "Escape") setShowJohnny(false);
           }}
           role="dialog"
           tabIndex={-1}
         >
-          <div className="matthew-card">
-            {matthewSrc ? (
-              <img src={matthewSrc} alt="Matthew" />
+          <div className="johnny-card">
+            {johnnySrc ? (
+              <img src={johnnySrc} alt="Johnny" />
             ) : (
               <div style={{ color: "white", padding: 24, fontSize: 20 }}>
-                Matthew
+                Johnny
               </div>
             )}
           </div>

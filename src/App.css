@@ -108,7 +108,7 @@ body,
   }
 }
 
-.matthew-overlay {
+.johnny-overlay {
   position: fixed;
   inset: 0 0 0 0;
   display: flex;
@@ -119,7 +119,7 @@ body,
   pointer-events: auto;
 }
 
-.matthew-card {
+.johnny-card {
   background: transparent;
   border-radius: 12px;
   padding: 8px;
@@ -127,10 +127,10 @@ body,
   align-items: center;
   justify-content: center;
   transform-origin: center center;
-  animation: matthew-pop 540ms cubic-bezier(.2, .8, .2, 1) forwards;
+  animation: johnny-pop 540ms cubic-bezier(.2, .8, .2, 1) forwards;
 }
 
-.matthew-card img {
+.johnny-card img {
   display: block;
   max-width: 80vw;
   max-height: 80vh;
@@ -138,7 +138,7 @@ body,
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-@keyframes matthew-pop {
+@keyframes johnny-pop {
   0% {
     transform: scale(0.6) translateY(8px);
     opacity: 0;
